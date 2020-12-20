@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
     "start": "ts-node src/index.ts",
-    "build": "rm -rf dist && tsc -p .",
+    "build": "rm -rf dist && tsc -p . && cp ./src/formatted-districts.json ./dist/",
     "test": "jest"
   },
   "author": "",

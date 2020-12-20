@@ -3,7 +3,7 @@ FROM node:alpine
 WORKDIR /app
 
 COPY package.json .
-COPY src/formatted-districts.json .
+#COPY src/formatted-districts.json .
 
 RUN npm install
 RUN npm install pm2 -g
