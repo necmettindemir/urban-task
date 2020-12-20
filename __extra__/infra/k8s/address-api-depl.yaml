@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: address-api-deploy
+  labels:
+    name: address-api-deploy
+    app: address-api
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      name: address-api-pod
+      app: address-api
+  template:
+    metadata:
+      name: address-api-pod
+      labels:
+        name: address-api-pod
+        app: address-api
+    spec:
+      containers:
+        - name: address-api
+          image: 35353535/address-api
+          ports:
+            - containerPort: 4001                    
