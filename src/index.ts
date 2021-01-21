@@ -14,9 +14,11 @@ import * as Messages from './definitions/messages';
 import * as DefaultSettings from './definitions/defaultSettings';
 import { Result } from './models/Result';
 
+import { ENV_PORT } from '../env.config';
+
 
 //-------------------
-const port = 4001;
+const port = ENV_PORT;//4001; //from .env
 const app = express();
 //-------------------
 
